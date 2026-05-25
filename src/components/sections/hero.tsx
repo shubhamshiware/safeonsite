@@ -105,7 +105,7 @@ export const Hero = () => {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8, ease: [0.65, 0, 0.35, 1] }}
+            transition={{ delay: 0.6, duration: 0.8, ease: [0.65, 0, 0.35, 1] as [number, number, number, number] }}
             className="flex flex-wrap justify-center gap-4"
           >
   <MagneticButton className="group relative overflow-hidden rounded-2xl">

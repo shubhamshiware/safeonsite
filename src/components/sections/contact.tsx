@@ -151,7 +151,7 @@ export const ContactSection = () => {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: [0.65, 0, 0.35, 1] }}
+              transition={{ duration: 0.8, ease: [0.65, 0, 0.35, 1] as [number, number, number, number] }}
             >
               <GlassCard className="p-8 md:p-12 border-brand-blue/10 shadow-2xl relative overflow-hidden">
                 {/* Decorative background for the card */}
@@ -160,7 +160,7 @@ export const ContactSection = () => {
                 <div className="relative z-10">
                   <div className="mb-10">
                     <h3 className="text-2xl font-bold text-white mb-2">Project Inquiry</h3>
-                    <p className="text-muted-foreground">Fill out the form below and we'll craft a custom solution for your business.</p>
+                    <p className="text-muted-foreground">Fill out the form below and we will craft a custom solution for your business.</p>
                   </div>
 
                   <ContactForm />

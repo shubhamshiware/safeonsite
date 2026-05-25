@@ -44,7 +44,7 @@ const ReasonCard = ({ reason, index }: { reason: any, index: number }) => {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ delay: index * 0.1, duration: 0.8, ease: [0.215, 0.61, 0.355, 1] }}
+      transition={{ delay: index * 0.1, duration: 0.8, ease: [0.215, 0.61, 0.355, 1]as [number, number, number, number] }}
       className="flex flex-col gap-6 group relative p-8 rounded-3xl hover:bg-white/[0.03] transition-colors duration-500"
     >
       <div className="relative w-16 h-16 flex items-center justify-center">

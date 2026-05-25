@@ -47,7 +47,7 @@ export const TeamCulture = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.2, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: i * 0.2, duration: 1, ease: [0.65, 0, 0.35, 1] as [number, number, number, number] }}
             className="group"
           >
             <GlassCard className="p-0 overflow-hidden border-white/5 hover:border-brand-blue/30 transition-all duration-700 h-full flex flex-col">

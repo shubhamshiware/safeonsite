@@ -135,7 +135,7 @@ const ServiceCard = ({ service, index }: { service: typeof services[0], index: n
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
-      transition={{ delay: index * 0.1, duration: 0.8, ease: [0.65, 0, 0.35, 1] }}
+      transition={{ delay: index * 0.1, duration: 0.8, ease: [0.65, 0, 0.35, 1] as [number, number, number, number] }}
       className="perspective-1000 group"
     >
       <div 

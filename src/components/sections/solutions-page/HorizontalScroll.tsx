@@ -91,7 +91,7 @@ export const HorizontalScroll = () => {
                     <motion.h2 
                       initial={{ opacity: 0, y: 50, rotateX: 45 }}
                       whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-                      transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+                      transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] as [number, number, number, number], delay: 0.1 }}
                       className="text-5xl md:text-7xl xl:text-9xl font-bold text-white tracking-tighter leading-[0.85]"
                     >
                       {item.title}
@@ -165,7 +165,7 @@ export const HorizontalScroll = () => {
                   <motion.div
                     initial={{ opacity: 0, x: 50, rotateY: 15 }}
                     whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
-                    transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
                     className="relative group perspective-2000 hidden lg:block"
                   >
                     <div className="absolute -inset-4 bg-brand-blue/20 blur-3xl rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-1000" />

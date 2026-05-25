@@ -47,7 +47,7 @@ const Counter = ({ value, suffix, label, icon: Icon }: typeof stats[0]) => {
     if (isInView && nodeRef.current) {
       const controls = animate(0, value, {
         duration: 2,
-        ease: [0.65, 0, 0.35, 1],
+        ease: [0.65, 0, 0.35, 1] as [number, number, number, number],
         onUpdate(value) {
           if (nodeRef.current) {
             nodeRef.current.textContent = Math.round(value).toString();
@@ -101,7 +101,7 @@ export const About = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.65, 0, 0.35, 1] }}
+            transition={{ duration: 0.8, ease: [0.65, 0, 0.35, 1] as [number, number, number, number] }}
           >
             <AnimatedHeading
               tagline="Our Story"
@@ -127,7 +127,7 @@ export const About = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, ease: [0.65, 0, 0.35, 1] }}
+            transition={{ duration: 1, ease: [0.65, 0, 0.35, 1] as [number, number, number, number] }}
             className="relative"
           >
             <div className="aspect-square glass-morphism rounded-4xl border border-white/10 flex items-center justify-center p-12 relative overflow-hidden group">

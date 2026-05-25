@@ -53,7 +53,7 @@ export const AnimatedHeading = ({
       y: 0,
       transition: {
         duration: 0.8,
-        ease: [0.65, 0, 0.35, 1], // ease-premium
+        ease: [0.65, 0, 0.35, 1] as [number, number, number, number], // ease-premium
       },
     },
   };

@@ -97,7 +97,7 @@ const TimelineItem = ({ step, index }: { step: typeof steps[0], index: number })
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.8, ease: [0.65, 0, 0.35, 1] }}
+      transition={{ duration: 0.8, ease: [0.65, 0, 0.35, 1] as [number, number, number, number] }}
       className={`relative flex flex-col md:flex-row items-center gap-8 ${isEven ? "md:flex-row-reverse" : ""}`}
     >
       {/* Connector Node */}
