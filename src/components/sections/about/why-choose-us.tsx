@@ -3,9 +3,15 @@
 import { motion } from "framer-motion";
 import { AnimatedHeading } from "@/components/ui/animated-heading";
 import { SectionContainer } from "@/components/ui/section-container";
-import { Shield, Zap, TrendingUp, Users, Lock, Rocket } from "lucide-react";
+import { Shield, Zap, TrendingUp, Users, Lock, Rocket, type LucideIcon } from "lucide-react";
 
-const reasons = [
+interface Reason {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+}
+
+const reasons: Reason[] = [
   {
     title: "High Performance",
     description: "Optimized codebases and efficient architectures ensure your enterprise systems run at peak performance.",
@@ -38,7 +44,7 @@ const reasons = [
   }
 ];
 
-const ReasonCard = ({ reason, index }: { reason: any, index: number }) => {
+const ReasonCard = ({ reason, index }: { reason: Reason, index: number }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}

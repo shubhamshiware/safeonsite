@@ -32,6 +32,7 @@ const solutions = [
     description: "Streamline your entire business lifecycle with automated SAP S/4HANA workflows and intelligent process mining.",
     icon: Database,
     bgClass: "bg-brand-blue",
+    color: "brand-blue",
     features: ["Real-time Reporting", "Auto-reconciliation", "AI Predictions"],
     mockupType: "dashboard"
   },
@@ -42,6 +43,7 @@ const solutions = [
     description: "Optimize source-to-pay processes with integrated SAP Ariba solutions and automated vendor selection.",
     icon: ShoppingCart,
     bgClass: "bg-brand-cyan",
+    color: "brand-cyan",
     features: ["Smart Invoicing", "Contract Lifecycle", "Savings Tracking"],
     mockupType: "table"
   },
@@ -52,6 +54,7 @@ const solutions = [
     description: "Empower your workforce with modern HR portals, automated onboarding, and global payroll management.",
     icon: Users,
     bgClass: "bg-blue-500",
+    color: "blue-500",
     features: ["Talent Analytics", "Digital Onboarding", "Self-service Portals"],
     mockupType: "profile"
   },
@@ -62,6 +65,7 @@ const solutions = [
     description: "Enhance transparency and collaboration across your supply chain with our centralized vendor portal solutions.",
     icon: Truck,
     bgClass: "bg-indigo-500",
+    color: "indigo-500",
     features: ["Risk Assessment", "Performance Scorecards", "Direct Messaging"],
     mockupType: "map"
   },
@@ -72,6 +76,7 @@ const solutions = [
     description: "Convert enterprise data into strategic advantages with high-end SAP Analytics Cloud visualizations.",
     icon: BarChart,
     bgClass: "bg-sky-500",
+    color: "sky-500",
     features: ["Predictive Modeling", "Interactive Charts", "Data Storytelling"],
     mockupType: "charts"
   },
@@ -82,6 +87,7 @@ const solutions = [
     description: "Accelerate decision-making with multi-level Fiori approval apps and seamless mobile integration.",
     icon: CheckCircle,
     bgClass: "bg-emerald-500",
+    color: "emerald-500",
     features: ["Mobile Approvals", "Audit Trail", "SLA Monitoring"],
     mockupType: "tasks"
   }

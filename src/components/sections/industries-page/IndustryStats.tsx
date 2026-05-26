@@ -6,7 +6,7 @@ import { AnimatedMetric } from "@/components/sections/solutions-page/AnimatedMet
 import { AnimatedHeading } from "@/components/ui/animated-heading";
 
 export const IndustryStats = () => {
-  const stats = [
+  const stats: { label: string; value: string; suffix: string; prefix?: string }[] = [
     { label: "Global Deployments", value: "2500", suffix: "+" },
     { label: "Client Satisfaction", value: "98", suffix: "%" },
     { label: "Avg. Efficiency ROI", value: "315", suffix: "%" },

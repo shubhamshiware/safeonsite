@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView, Variant } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { ReactNode, useRef } from "react";
 
 interface FadeInProps {

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform, useInView, animate, useSpring } from "framer-motion";
 import { SectionContainer } from "@/components/ui/section-container";
 import { AnimatedHeading } from "@/components/ui/animated-heading";

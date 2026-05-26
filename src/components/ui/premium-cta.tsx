@@ -1,62 +1,71 @@
 "use client";
 
-import * as React from "react";
-import { Slot } from "@radix-ui/react-slot";
-import { cva, type VariantProps } from "class-variance-authority";
-
+import { Button } from "@/components/ui/button";
+import { SectionContainer } from "@/components/ui/section-container";
+import { MagneticButton } from "@/components/ui/magnetic-button";
+import { AnimatedHeading } from "@/components/ui/animated-heading";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 outline-none focus-visible:ring-2 focus-visible:ring-ring",
-  {
-    variants: {
-      variant: {
-        default:
-          "bg-primary text-primary-foreground hover:opacity-90",
-
-        premium:
-          "bg-gradient-to-r from-brand-blue to-brand-cyan text-white shadow-lg hover:scale-[1.02]",
-
-        outline:
-          "border border-white/20 bg-white/5 text-white hover:bg-white/10",
-
-        ghost:
-          "hover:bg-white/10 text-white",
-      },
-
-      size: {
-        default: "h-10 px-4 py-2",
-        lg: "h-14 px-8 text-base",
-        sm: "h-8 px-3 text-xs",
-      },
-    },
-
-    defaultVariants: {
-      variant: "default",
-      size: "default",
-    },
-  }
-);
-
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
-  asChild?: boolean;
+export interface PremiumCTAProps {
+  title: string;
+  subtitle: string;
+  primaryButtonText: string;
+  primaryButtonHref: string;
+  secondaryButtonText?: string;
+  secondaryButtonHref?: string;
+  className?: string;
 }
 
-export function Button({
+export function PremiumCTA({
+  title,
+  subtitle,
+  primaryButtonText,
+  primaryButtonHref,
+  secondaryButtonText,
+  secondaryButtonHref,
   className,
-  variant,
-  size,
-  asChild = false,
-  ...props
-}: ButtonProps) {
-  const Comp = asChild ? Slot : "button";
-
+}: PremiumCTAProps) {
   return (
-    <Comp
-      className={cn(buttonVariants({ variant, size }), className)}
-      {...props}
-    />
+    <section className={cn("relative overflow-hidden py-24", className)}>
+      {/* Background Decorative Elements */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-blue/5 blur-[120px] rounded-full scale-150 opacity-50" />
+      </div>
+
+      <SectionContainer className="relative z-10">
+        <div className="glass-morphism rounded-[2.5rem] p-10 md:p-20 border-white/10 text-center flex flex-col items-center gap-10">
+          <AnimatedHeading
+            tagline="Next-Gen Enterprise"
+            title={title}
+            subtitle={subtitle}
+            level="h2"
+            className="max-w-3xl"
+          />
+
+          <div className="flex flex-wrap justify-center gap-6">
+            <MagneticButton>
+              <Button variant="premium" size="lg" asChild>
+                <Link href={primaryButtonHref}>
+                  {primaryButtonText}
+                  <ArrowRight className="ml-2 size-5" />
+                </Link>
+              </Button>
+            </MagneticButton>
+
+            {secondaryButtonText && secondaryButtonHref && (
+              <MagneticButton>
+                <Button variant="glass" size="lg" asChild>
+                  <Link href={secondaryButtonHref}>
+                    {secondaryButtonText}
+                  </Link>
+                </Button>
+              </MagneticButton>
+            )}
+          </div>
+        </div>
+      </SectionContainer>
+    </section>
   );
 }
